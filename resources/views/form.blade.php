@@ -14,12 +14,12 @@
     </style>
   </head>
   <body class="container">
+
     <form  method="POST" action="/avatars" enctype="multipart/form-data">
       {{ csrf_field() }}
 
-      <input type='file' name='avatar'></input>
+      <input type="file" name="avatar"></input>
 
-      {{ method_field('POST') }}
 
       <button type="submit">Save Avatar</button>
     </form>

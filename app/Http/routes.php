@@ -22,6 +22,13 @@ Route::get('index', function () {
 Route::get('about', function () {
     return view('about');
 });
+
 Route::get('form', function () {
     return view('form');
+});
+
+Route::post('avatars', function () {
+    request()->file('avatar')->store('avatars');
+
+    return back();
 });
