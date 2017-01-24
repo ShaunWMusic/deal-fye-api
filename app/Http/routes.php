@@ -10,7 +10,18 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
+});
+
+Route::get('index', function () {
+  $people = ['Taylor', 'Matt', 'Jeffrey'];
+    return view('welcome', compact('people'));
+});
+
+Route::get('about', function () {
+    return view('about');
+});
+Route::get('form', function () {
+    return view('form');
 });
