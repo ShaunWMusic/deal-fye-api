@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <form action="/avatars" method="POST">
+    <form action="/avatars" method="POST" enctype="multipart/form-data">
       {{ csrf_field() }}
 
       <input type="file" name="avatar"></input>

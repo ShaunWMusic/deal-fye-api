@@ -32,8 +32,8 @@ Route::get('form', function () {
     return view('form');
 });
 
-// Route::post('avatars', function () {
-//   request()->file('avatar')->store('avatars');
-//
-//   return view('form');
-// });
+Route::post('avatars', function () {
+  request()->file('avatar')->store('avatars');
+
+  return view('form');
+});
