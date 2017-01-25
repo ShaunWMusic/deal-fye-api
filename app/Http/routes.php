@@ -1,5 +1,6 @@
 <?php
 
+use App\Notifications\LessonPublished;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,24 +12,27 @@
 |
 */
 Route::get('/', function () {
-  return view('welcome');
+  $user = App\User::first();
+  $lesson = App\Lesson::first();
+  $user->notify(new LessonPublished($lesson));
 });
 
-Route::get('index', function () {
-  $people = ['Taylor', 'Matt', 'Jeffrey'];
-    return view('welcome', compact('people'));
-});
 
-Route::get('about', function () {
-    return view('about');
-});
-
+// Route::get('index', function () {
+//   $people = ['Taylor', 'Matt', 'Jeffrey'];
+//     return view('welcome', compact('people'));
+// });
+//
+// Route::get('about', function () {
+//     return view('about');
+// });
+//
 Route::get('form', function () {
     return view('form');
 });
 
-Route::post('avatars', function () {
-    request()->file('avatar')->store('avatars');
-
-    return back();
-});
+// Route::post('avatars', function () {
+//   request()->file('avatar')->store('avatars');
+//
+//   return view('form');
+// });
