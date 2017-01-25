@@ -12,9 +12,7 @@ use App\Notifications\LessonPublished;
 |
 */
 Route::get('/', function () {
-  // $user = App\User::first();
-  // $lesson = App\Lesson::first();
-  // $user->notify(new LessonPublished($lesson));
+
   return view('welcome');
 });
 
@@ -24,12 +22,19 @@ Route::get('/', function () {
 //     return view('welcome', compact('people'));
 // });
 //
-// Route::get('about', function () {
-//     return view('about');
-// });
+Route::get('about', function () {
+    return view('about');
+});
 //
 Route::get('form', function () {
     return view('form');
+});
+
+Route::get('notifyme', function () {
+  $user = App\User::first();
+  $lesson = App\Lesson::first();
+  $user->notify(new LessonPublished($lesson));
+    return view('notifyme');
 });
 
 Route::post('avatars', function () {
