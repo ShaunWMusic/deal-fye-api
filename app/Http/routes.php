@@ -12,9 +12,10 @@ use App\Notifications\LessonPublished;
 |
 */
 Route::get('/', function () {
-  $user = App\User::first();
-  $lesson = App\Lesson::first();
-  $user->notify(new LessonPublished($lesson));
+  // $user = App\User::first();
+  // $lesson = App\Lesson::first();
+  // $user->notify(new LessonPublished($lesson));
+  return view('welcome');
 });
 
 
@@ -31,8 +32,8 @@ Route::get('form', function () {
     return view('form');
 });
 
-// Route::post('avatars', function () {
-//   request()->file('avatar')->store('avatars');
-//
-//   return view('form');
-// });
+Route::post('avatars', function () {
+  request()->file('avatar')->store('avatars');
+
+  return view('form');
+});

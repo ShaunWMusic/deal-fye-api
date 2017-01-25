@@ -2,7 +2,7 @@
 
 namespace App\Notifications;
 
-use App\Lesson;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -45,8 +45,6 @@ class LessonPublished extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-
-
                     ->line('The introduction to the notification.')
                     ->action('Notification Action', 'https://laravel.com')
                     ->line('Thank you for using our application!');
