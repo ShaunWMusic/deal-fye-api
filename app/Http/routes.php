@@ -43,3 +43,7 @@ Route::post('avatars', function () {
 
   return view('fileupload');
 });
+
+Route::get('user', function () {
+  return view('user');
+});
