@@ -13,7 +13,6 @@ use App\Notifications\InvoicePaid;
 |
 */
 Route::get('/', function () {
-
   return view('welcome');
 });
 
