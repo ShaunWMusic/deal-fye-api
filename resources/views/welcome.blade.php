@@ -75,7 +75,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Home Page
+                    Home
                 </div>
 
                 <div class="links">
