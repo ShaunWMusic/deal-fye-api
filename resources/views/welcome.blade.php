@@ -75,11 +75,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Homepage
+                    Home Page
                 </div>
 
                 <div class="links">
-                    <a href="form">Form</a>
+                    <a href="fileupload">File Upload</a>
                     <a href="about">About</a>
                     <a href="notifyme">Notify Me</a>
                     <a href="https://forge.laravel.com">Forge</a>

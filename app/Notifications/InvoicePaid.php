@@ -2,27 +2,23 @@
 
 namespace App\Notifications;
 
-use App\Lesson;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class LessonPublished extends Notification
+class InvoicePaid extends Notification
 {
-  use Queueable;
-
-  protected $lesson;
-
+    use Queueable;
+    protected $invoice
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Lesson $lesson)
+    public function __construct(Invoice $Invoice)
     {
-        //
-        $this->lesson = $lesson;
+        $this->Invoice = $Invoice;
     }
 
     /**
