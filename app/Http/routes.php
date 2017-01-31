@@ -1,6 +1,7 @@
 <?php
 
-use App\Notifications\LessonPublished;
+// use App\Notifications\LessonPublished;
+use App\Notifications\InvoicePaid;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,19 +27,20 @@ Route::get('about', function () {
     return view('about');
 });
 //
-Route::get('form', function () {
-    return view('form');
+Route::get('fileupload', function () {
+    return view('fileupload');
 });
 
 Route::get('notifyme', function () {
   $user = App\User::first();
   $lesson = App\Lesson::first();
-  $user->notify(new LessonPublished($lesson));
+  $user->notify(new App\Notifications\LessonPublished($lesson));
+  // $user->notify(new InvoicePaid($invoice));
     return view('notifyme');
 });
 
 Route::post('avatars', function () {
   request()->file('avatar')->store('avatars');
 
-  return view('form');
+  return view('fileupload');
 });
