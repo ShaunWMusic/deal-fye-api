@@ -1,6 +1,6 @@
 <?php
 
-// use App\Notifications\LessonPublished;
+use App\Notifications\LessonPublished;
 use App\Notifications\InvoicePaid;
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +30,17 @@ Route::get('fileupload', function () {
     return view('fileupload');
 });
 
-Route::get('notifyme', function () {
+Route::get('emailinvoice', function () {
+  $invoice = App\Invoice::first();
+  $invoice->notify(new App\Notifications\InvoicePaid($invoice));
+    return view('emailinvoice');
+});
+
+Route::get('emaillesson', function () {
   $user = App\User::first();
   $lesson = App\Lesson::first();
   $user->notify(new App\Notifications\LessonPublished($lesson));
-  // $user->notify(new InvoicePaid($invoice));
-    return view('notifyme');
+    return view('emaillesson');
 });
 
 Route::post('avatars', function () {

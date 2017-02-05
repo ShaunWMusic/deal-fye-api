@@ -75,15 +75,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Home
+                    About Page
                 </div>
 
                 <div class="links">
-                    <a href="fileupload">File Upload</a>
-                    <a href="about">About</a>
-                    <a href="emailinvoice">Email Invoice</a>
-                    <a href="emaillesson">Email Lesson</a>
-                    <a href="user">User</a>
+                    <a href="/">Home</a>
+                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>

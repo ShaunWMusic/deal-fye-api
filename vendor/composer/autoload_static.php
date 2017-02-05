@@ -283,6 +283,7 @@ class ComposerStaticInitcaa46dbff3ae566d4f788ad0a37457fc
     );
 
     public static $classMap = array (
+        'CreateInvoicesTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_01_144658_createInvoicesTable.php',
         'CreateLessonsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_27_181729_create_lessons_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
@@ -358,6 +359,7 @@ class ComposerStaticInitcaa46dbff3ae566d4f788ad0a37457fc
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'InvoicesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/InvoicesTableSeeder.php',
         'LessonsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/LessonsTableSeeder.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

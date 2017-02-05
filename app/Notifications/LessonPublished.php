@@ -11,7 +11,6 @@ use Illuminate\Notifications\Messages\MailMessage;
 class LessonPublished extends Notification
 {
   use Queueable;
-
   protected $lesson;
 
     /**
@@ -45,7 +44,7 @@ class LessonPublished extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
+                    ->line('The introduction to Email Lessons that notify you.')
                     ->action('Notification Action', 'https://laravel.com')
                     ->line('Thank you for using our application!');
     }

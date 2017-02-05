@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Invoice;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -10,15 +11,15 @@ use Illuminate\Notifications\Messages\MailMessage;
 class InvoicePaid extends Notification
 {
     use Queueable;
-    protected $invoice
+    protected $invoice;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Invoice $Invoice)
+    public function __construct(Invoice $invoice)
     {
-        $this->Invoice = $Invoice;
+        $this->Invoice = $invoice;
     }
 
     /**
@@ -41,7 +42,7 @@ class InvoicePaid extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
+                    ->line('The introduction to invoices in notification.')
                     ->action('Notification Action', 'https://laravel.com')
                     ->line('Thank you for using our application!');
     }
